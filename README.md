@@ -1,2 +1,2 @@
-# python_for_QA_part2
+# Repository for Python Training
 Домашние задания для курса Программирование на Python для тестировщиков
