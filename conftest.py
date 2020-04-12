@@ -29,7 +29,7 @@ def app(request):
     global target
     browser = request.config.getoption("--browser")
     if fixture is None or not fixture.is_valid():
-        fixture = Application(browser=browser, base_url=config["web"]["baseUrl"])
+        fixture = Application(browser=browser, config=config)
     fixture.session.ensure_login("administrator", "root") #для тестов которым нужны админ права
     return fixture
 

@@ -1,4 +1,6 @@
 from model.project import Project
+import random
+import string
 
 
 class ProjectHelper:
@@ -50,3 +52,7 @@ class ProjectHelper:
     def enter_to_project_page_by_id(self, id):
         wd = self.app.wd
         wd.get(self.app.base_url+'manage_proj_edit_page.php?project_id='+id)
+
+    def random_name_field(self, prefix, maxlen):
+        symbols = string.ascii_letters
+        return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
