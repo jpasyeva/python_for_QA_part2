@@ -51,7 +51,7 @@ class ProjectHelper:
 
     def enter_to_project_page_by_id(self, id):
         wd = self.app.wd
-        wd.get(self.app.base_url+'manage_proj_edit_page.php?project_id='+id)
+        wd.get(self.app.base_url+'manage_proj_edit_page.php?project_id='+str(id))
 
     def random_name_field(self, prefix, maxlen):
         symbols = string.ascii_letters
